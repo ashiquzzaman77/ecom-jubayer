@@ -1,17 +1,19 @@
+<!-- Preloader Script -->
+<script>
+    window.addEventListener('load', function() {
+        // Hide the preloader with a fade-out effect when the page is fully loaded
+        let preloader = document.querySelector('.preloader');
+        preloader.style.transition = 'opacity 0.5s ease-out';
+        preloader.style.opacity = '0';
 
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        // After the fade-out, completely hide it
+        setTimeout(function() {
+            preloader.style.display = 'none';
+        }, 500); // Adjust this timeout if needed to sync with your fade-out duration
+    });
+</script>
 
-<script src="{{ asset('frontend/js/jquery.min.js') }}"></script>
-<script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('frontend/js/meanmenu.min.js') }}"></script>
-<script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('frontend/js/jquery.magnific-popup.min.js') }}"></script>
-<script src="{{ asset('frontend/js/odometer.min.js') }}"></script>
-<script src="{{ asset('frontend/js/jquery.appear.js') }}"></script>
-<script src="{{ asset('frontend/js/form-validator.min.js') }}"></script>
-<script src="{{ asset('frontend/js/contact-form-script.js') }}"></script>
-<script src="{{ asset('frontend/js/jquery.ajaxchimp.min.js') }}"></script>
-<script src="{{ asset('frontend/js/wow.min.js') }}"></script>
-<script src="{{ asset('frontend/js/custom.js') }}"></script>
+<script src="{{ asset('frontend/js/vendor.js') }}"></script>
+<script src="{{ asset('frontend/js/main.js') }}"></script>
 
 @stack('scripts')
